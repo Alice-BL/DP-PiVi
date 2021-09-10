@@ -16,7 +16,7 @@ var saveButtonOne = document.getElementById("saveBtn-1");
 
 function displayColor() {
     for (var i = 9; i < 18; i++) {
-        if (currentHour === i) {
+        if (Number(currentHour) === i) {
             // string concatenation
             $("#" + i).addClass("present");
 
