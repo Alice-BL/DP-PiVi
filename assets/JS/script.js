@@ -36,6 +36,18 @@ setTimeout(function () {
     location.reload();
 }, 600 * 1000);
 
+// Restoring events in the local storage
+saveButtonOne.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    var eventInput = document.getElementById("9");
+    console.log(eventInput);
+    var text = eventInput.textContent;
+    console.log(text);
+
+    localStorage.setItem("eventInput", text);
+    
+});
 
 
 
