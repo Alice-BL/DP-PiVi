@@ -5,6 +5,8 @@ console.log("HH", currentHour);
 var today = moment();
 $("#currentDay").text(today.format("ddd, MMM Do, YYYY"));
 
+var saveButtonOne = document.getElementById("saveBtn-1");
+
 
 
 // Using jQuery to manipulate the DOM
@@ -29,11 +31,11 @@ function displayColor() {
 }
 displayColor();
 
-var eventInput = document.querySelector(".col-9");
-eventInput.textContent = text;
-document.querySelector("#saveBtn").addEventListener("click", function(event) {
-    event.preventDefault();
+// The page will update every 10 minutes without them having to refresh
+setTimeout(function () {
+    location.reload();
+}, 600 * 1000);
 
-});
 
-localStorage.setItem("eventInput", text.value);
+
+
