@@ -29,3 +29,11 @@ function displayColor() {
 }
 displayColor();
 
+var eventInput = document.querySelector(".col-9");
+eventInput.textContent = text;
+document.querySelector("#saveBtn").addEventListener("click", function(event) {
+    event.preventDefault();
+
+});
+
+localStorage.setItem("eventInput", text.value);
