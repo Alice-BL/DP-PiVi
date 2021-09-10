@@ -1,18 +1,16 @@
 body {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
-textarea {
+.col-9 {
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
-  display: 100%;
-  width: 100%;
 }
 
 .jumbotron {
@@ -21,13 +19,9 @@ textarea {
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  font-family:'Dancing Script', cursive; ;
 }
 
-#currentDay {
-  font-family:'Dancing Script', cursive;
-  font-size: 30px;
-  font-weight: bold;
-}
 .description {
   white-space: pre-wrap;
 }
@@ -35,23 +29,18 @@ textarea {
 .time-block {
   text-align: center;
   border-radius: 15px;
-  border-style: dashed;
 }
 
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 2px dashed lightgreen;
-
+  border-top: 1px dashed lightgreen;
 }
 
-#time {
+.hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed;
-  text-align: right;
-  font-family: 'Open Sans', sans-serif;
-  
+  border-top: 1px dashed #000000;
 }
 
 .past {
@@ -69,28 +58,17 @@ textarea {
   color: white;
 }
 
-#saveBtn {
+.col-1 {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 15px;
+  background-color: lightseagreen;
   color: white;
-  font-family: 'Open Sans', sans-serif;
 }
 
-#saveBtn:hover {
+.col-1 i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
-  background-color: rebeccapurple;
 }
 
-.col-1 {
-  background: lightseagreen;
-  border-bottom-left-radius: 2px black;
-}
-.col-2 {
-  font-size: 20px;
-}
-#text {
-  font-size: 20px;
-}
 

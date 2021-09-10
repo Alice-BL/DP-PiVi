@@ -1,6 +1,6 @@
 //Setting the current date
 
 var today = moment();
-$("#currentDay").text(today.format("ddd, MMM Do, YYYY"));
+$("#currentDay").text(today.format("ddd, MMM Do, YYYY, hh:mm:ss"));
 
 
