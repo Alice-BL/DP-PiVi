@@ -42,7 +42,7 @@ var saveButtonOne = document.getElementById("saveBtn-1");
 saveButtonOne.addEventListener("click", function (event) {
     event.preventDefault();
     var eventInput = document.getElementById("9").value;
-    var hour = "9M";    
+    var hour = "9AM";    
     localStorage.setItem(hour, eventInput);
     
 });
@@ -50,7 +50,7 @@ var saveButtonTwo = document.getElementById("saveBtn-2");
 saveButtonTwo.addEventListener("click", function (event) {
     event.preventDefault();
     var eventInput = document.getElementById("10").value;
-    var hour = "10M";    
+    var hour = "10AM";    
     localStorage.setItem(hour, eventInput);
     
 });
@@ -59,7 +59,7 @@ var saveButtonThree = document.getElementById("saveBtn-3");
 saveButtonThree.addEventListener("click", function (event) {
     event.preventDefault();
     var eventInput = document.getElementById("11").value;
-    var hour = "11M";    
+    var hour = "11AM";    
     localStorage.setItem(hour, eventInput);
     
 });
@@ -117,5 +117,17 @@ saveButtonNine.addEventListener("click", function (event) {
     
 });
 
+// Using jQuery to set .getItem, so that when the user refreshes the page, the saved events persist
+ 
+$("#9").text(localStorage.getItem("9AM"));
+$("#10").text(localStorage.getItem("10AM"));
+$("#11").text(localStorage.getItem("11AM"));
+$("#12").text(localStorage.getItem("12PM"));
+$("#13").text(localStorage.getItem("1PM"));
+$("#14").text(localStorage.getItem("2PM"));
+$("#15").text(localStorage.getItem("3PM"));
+$("#16").text(localStorage.getItem("4PM"));
+$("#17").text(localStorage.getItem("5PM"));
 
-    
+
+

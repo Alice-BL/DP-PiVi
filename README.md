@@ -1,4 +1,4 @@
-# DP-PiVi
+# Daily Planner
 1. the current day is displayed at the top of the calendar
 2. timeblocks for standard business hours are displayed when the user scrolls down
 3. each timeblock is color coded to indicate whether it is in the past, present, or future accordingly 
