@@ -1,14 +1,18 @@
 // Daclaring variables and assigning values to them for present moment
 var currentHour = moment().format("HH");
+var timeDisplayEl = $('#currentDay');
 console.log("HH", currentHour);
-// Setting the current date
-function displayTime() {
-    var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
-    timeDisplayEl.text(rightNow);
-  }
+// Setting the current 
+  function displayTime() {
+    
+      var currentHour = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+   timeDisplayEl.text(currentHour);
+ }
+
+  
   
 // The page will update colors, date; and reload without them having to refresh
-setInterval(displayTime, 300 * 1000);
+setInterval(displayTime, 1000);
 
 
 // Using jQuery to manipulate the DOM
@@ -127,6 +131,3 @@ $("#14").text(localStorage.getItem("2PM"));
 $("#15").text(localStorage.getItem("3PM"));
 $("#16").text(localStorage.getItem("4PM"));
 $("#17").text(localStorage.getItem("5PM"));
-
-
-     
