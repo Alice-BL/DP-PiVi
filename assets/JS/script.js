@@ -7,13 +7,9 @@ console.log("HH", currentHour);
     
       var currentHour = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
    timeDisplayEl.text(currentHour);
- }
-
-  
-  
-// The page will update colors, date; and reload without them having to refresh
-setInterval(displayTime, 1000);
-
+ }  
+  // The page will update colors, date; and reload without them having to refresh every minute
+setInterval(displayTime, 600*1000);
 
 // Using jQuery to manipulate the DOM
 // $("#timeblock").addClass("past");
@@ -41,6 +37,8 @@ displayColor();
 // Restoring events in the local storage
 // We need to have a key:value pair in order to store an object in local storage
 // key is set as the hour on the left side, and value is the text (event input) of textarea on the right side
+
+
 var saveButtonOne = document.getElementById("saveBtn-1");
 saveButtonOne.addEventListener("click", function (event) {
     event.preventDefault();
