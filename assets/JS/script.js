@@ -2,14 +2,13 @@
 var currentHour = moment().format("HH");
 console.log("HH", currentHour);
 // Setting the current date
-var today = moment();
-$("#currentDay").text(today.format("ddd, MMM Do, YYYY"));
-
-// The page will update every 10 minutes without them having to refresh
-// 1 minute = 60s => 10 minutes = 600s
-setTimeout(function () {
-    location.reload();
-}, 600 * 1000);
+function displayTime() {
+    var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+    timeDisplayEl.text(rightNow);
+  }
+  
+// The page will update colors, date; and reload without them having to refresh
+setInterval(displayTime, 300 * 1000);
 
 
 // Using jQuery to manipulate the DOM
@@ -131,3 +130,10 @@ $("#17").text(localStorage.getItem("5PM"));
 
 
 
+setInterval(function(){
+        
+        var date = moment().format("MMM Do YYYY, h:mm:ss a");
+        $("#currentDay").text(date);
+
+    }, 1000)
+     
