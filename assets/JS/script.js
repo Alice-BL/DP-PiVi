@@ -19,6 +19,7 @@ setTimeout(function () {
 
 function displayColor() {
     for (var i = 9; i < 18; i++) {
+        // it will not work if using (currentHour) only because it is a string, we need a number
         if (Number(currentHour) === i) {
             
             $("#" + i).addClass("present");
