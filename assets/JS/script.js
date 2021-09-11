@@ -129,11 +129,4 @@ $("#16").text(localStorage.getItem("4PM"));
 $("#17").text(localStorage.getItem("5PM"));
 
 
-
-setInterval(function(){
-        
-        var date = moment().format("MMM Do YYYY, h:mm:ss a");
-        $("#currentDay").text(date);
-
-    }, 1000)
      
