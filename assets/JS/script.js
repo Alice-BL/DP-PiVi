@@ -1,33 +1,42 @@
 // Daclaring variables and assigning values to them for present moment
-var currentHour = moment().format("HH");
 var timeDisplayEl = $('#currentDay');
-console.log("HH", currentHour);
 // Setting the current 
   function displayTime() {
-    
-      var currentHour = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
-   timeDisplayEl.text(currentHour);
+    var currentTime = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+   timeDisplayEl.text(currentTime);
  }  
   // The page will update colors, date; and reload without them having to refresh every minute
-setInterval(displayTime, 600*1000);
-
+setInterval(displayTime, 1000);
+setInterval(displayColor, 600000);
 // Using jQuery to manipulate the DOM
 // $("#timeblock").addClass("past");
 // $("#timeblock").addClass("present");
 // $("#timeblock").addClass("future");
 
 function displayColor() {
+    var currentHour = moment().format("HH");
+    console.log("HH", currentHour);
+
+       
     for (var i = 9; i < 18; i++) {
         // it will not work if using (currentHour) only because it is a string, we need a number
         if (Number(currentHour) === i) {
-            
             $("#" + i).addClass("present");
-
+            $("#" + i).removeClass("past");
+            $("#" + i).removeClass("future");
+            
+        /* When each loop is done, one hour goes by, we need to remove the unused classes which were added 
+        at the previous loop */      
+        
         } else if (currentHour > i) {
             $("#" + i).addClass("past");
+            $("#" + i).removeClass("present");
+            $("#" + i).removeClass("future");
 
         } else {
             $("#" + i).addClass("future");
+            $("#" + i).removeClass("past");
+            $("#" + i).removeClass("present");
         }
     }
 
@@ -36,9 +45,8 @@ displayColor();
 
 // Restoring events in the local storage
 // We need to have a key:value pair in order to store an object in local storage
-// key is set as the hour on the left side, and value is the text (event input) of textarea on the right side
-
-
+// key is set as the hour on the left side, and value is the text (event input) of textarea on the right sid
+  
 var saveButtonOne = document.getElementById("saveBtn-1");
 saveButtonOne.addEventListener("click", function (event) {
     event.preventDefault();
@@ -117,7 +125,6 @@ saveButtonNine.addEventListener("click", function (event) {
     localStorage.setItem(hour, eventInput);
     
 });
-
 // Using jQuery to set .getItem, so that when the user refreshes the page, the saved events persist
  
 $("#9").text(localStorage.getItem("9AM"));
