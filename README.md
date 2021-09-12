@@ -6,7 +6,7 @@
 # Screenshots
 4. when the user enters (an) event/events at each timeblock then clicks SAVE button for that timeblock, the text for that event is saved in local storage
 ![DailyPlanner](https://github.com/Alice-BL/DP-PiVi/blob/main/assets/Capture-DailyPlanner1.PNG)
-![DailyPlanner1](https://github.com/Alice-BL/DP-PiVi/blob/main/assets/Capture-Daily%20Planner.PNG)
+![DailyPlanner1](https://github.com/Alice-BL/DP-PiVi/blob/main/assets/Capture-Saved%20Events%20Persist.PNG)
 ![DailyPlanner2](https://github.com/Alice-BL/DP-PiVi/blob/main/assets/Capture-CurrentHour.PNG)
 
 # the URLs
