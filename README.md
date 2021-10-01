@@ -12,9 +12,10 @@
 # the URLs
 
 5. The URL of the functional, deployed application
-https://alice-bl.github.io/DP-PiVi/
+https://thutuephan.github.io/DP-PiVi/
 
 6. The github repo link:
-https://github.com/Alice-BL/DP-PiVi
+https://github.com/thutuephan/DP-PiVi
+
 
 
